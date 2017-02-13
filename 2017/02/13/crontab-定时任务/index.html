@@ -10,6 +10,13 @@
 
     <!--Description-->
     
+        <meta name="description" content="1 检查  crontab -l 是否安装
+ 检查crond服务是否启动 service crond status
+ 安装cron
+yum install vixie-cron
+yum install crontabs
+2.开始crontab -e测试每分钟打印到文件中/1    * date &amp;g">
+    
 
     <!--Author-->
     
@@ -18,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="变者"/>
+        <meta property="og:title" content="crontab 定时任务"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>Archiv: 2017 - 变者</title>
+    <title>crontab 定时任务 - 变者</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -126,76 +133,135 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2017</h1>
+                <div class="post-heading">
+                    <h1>crontab 定时任务</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-02-13
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/linux/">#linux</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2017/02/13/crontab-定时任务/">
-        <h1 class="post-title archive">
-            crontab 定时任务
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-02-13
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2017/02/13/JMeter-测试工具-入门/">
-        <h1 class="post-title archive">
-            JMeter 测试工具 入门
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-02-13
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2017/02/10/适合多层级调转-各种子模块引用返回保留上一次查询记录/">
-        <h1 class="post-title archive">
-            适合多层级调转,各种子模块引用返回保留上一次查询记录
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2017-02-10
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>1 检查  crontab -l 是否安装</p>
+<p> 检查crond服务是否启动 service crond status</p>
+<p> 安装cron</p>
+<p><code>yum install vixie-cron</code></p>
+<p><code>yum install crontabs</code></p>
+<p>2.开始<br>crontab -e<br>测试每分钟打印到文件中<br><em>/1 </em> <em> </em> * date &gt;&gt; /tmp/log.txt</p>
+<p><code>crontab -l  可以查看crontab 任务</code></p>
+<p>查看日志</p>
+<p><code>/var/mail</code></p>
+<p>开机执行<br><code>@reboot 执行 xx.sh</code></p>
+<p>或者</p>
+<p><code>vim /etc/re.d/re.locate 执行  xx.sh</code></p>
+<p> &gt;<br><em>/1 </em> <em> </em> * date &gt;&gt; /tmp/log.txt</p>
+<ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li><ul>
+<li>COMMAND<br>分钟0–59  小时 0-23 日期 1-31 月份 1-12 星期 0-7</li>
 </ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>每晚 21:30 重启服务<br>30 21 <em> </em> *</p>
+<p>每月1 ，10 22 日 4:45 重启<br>45 4 1,10,22 <em> </em></p>
+<p>每月1到10日 4:45  重启<br>45 4 1-10 <em> </em></p>
+<p>每2分钟 重启<br><em>/2 </em> <em> </em> *</p>
+<p>1-59/2 <em> </em> <em> </em></p>
+<p>晚上11点到 早7点 每隔一小时重启<br>0 23-7/1 <em> </em> *</p>
+<p>每天 18:00 - 23:00 每30分钟<br>0,30 18-23 <em> </em> <em><br>0-59/30 18-23 </em> <em> </em><br> &gt;</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+   
+    
+        <section id="comments">
+ 
+ 
+ 
+    <div class="ds-thread" data-thread-key="crontab-crontab-定时任务" data-title="crontab 定时任务" data-url=":year/:month/:day/:title/"></div>
+ 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'zccccccc'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+ 
+  </section>
+ 
+
+
+
+
+
+
+
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
@@ -256,7 +322,7 @@
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
