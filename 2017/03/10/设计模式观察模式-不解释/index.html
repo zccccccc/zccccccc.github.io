@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="观察模式　有时被称作发布/订阅模式，观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己12345678910111213141516171819202122232425262728293031323">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="张超">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="设计模式观察模式-不解释"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="变者"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>设计模式观察模式-不解释 - 变者</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+	
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">变者</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/zccccccc/">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>设计模式观察模式-不解释</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2017-03-10
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/设计模式/">#设计模式</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="观察模式-有时被称作发布-订阅模式，观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己"><a href="#观察模式-有时被称作发布-订阅模式，观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己" class="headerlink" title="观察模式　有时被称作发布/订阅模式，观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己"></a>观察模式　有时被称作发布/订阅模式，观察者模式定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">import java.util.Vector;</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 观察模式(java 内部提供  java.util.Observable,java.util.Observer)</div><div class="line"> * 当前demo中手动实现</div><div class="line"> * 实现场景需求: 用户订制消息主题 一个用户可以订制多主题</div><div class="line"> */</div><div class="line">public class ObservePattren &#123;</div><div class="line"></div><div class="line"></div><div class="line">    public static void main(String args[]) &#123;</div><div class="line"></div><div class="line"></div><div class="line">        //用户注册消息</div><div class="line">        UserRegisterMsgSubject userRegisterMsgSubject = new UserRegisterMsgSubject();</div><div class="line"></div><div class="line">        //系统消息</div><div class="line">        SystemMsgSubject systemMsgSubject = new SystemMsgSubject();</div><div class="line"></div><div class="line">        //创建观察者</div><div class="line">        AdministratorObserve administratorObserve = new AdministratorObserve(userRegisterMsgSubject);</div><div class="line">        systemMsgSubject.addObserver(administratorObserve);</div><div class="line"></div><div class="line">        EmployeeObserve employeeObserve = new EmployeeObserve(userRegisterMsgSubject);</div><div class="line">        systemMsgSubject.addObserver(employeeObserve);</div><div class="line"></div><div class="line">        //广播通知</div><div class="line">        userRegisterMsgSubject.setUserRegisterMsgSubject(&quot;张铁锤&quot;,&quot;129.12.1.21:9999&quot;,&quot;123456&quot;);</div><div class="line">        //系统消息</div><div class="line">        systemMsgSubject.setSystemMsgSubject(&quot;数据中心&quot;,&quot;您好,这是一个系统消息&quot;);</div><div class="line"></div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">interface Observe &#123;</div><div class="line">    void update(MsgSubject o, Object arg);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 管理员类型</div><div class="line"> */</div><div class="line">class AdministratorObserve implements Observe &#123;</div><div class="line"></div><div class="line">    private MsgSubject subject;</div><div class="line"></div><div class="line">    public AdministratorObserve(MsgSubject subject) &#123;</div><div class="line">        this.subject = subject;</div><div class="line">        subject.addObserver(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void update(MsgSubject o, Object arg) &#123;</div><div class="line"></div><div class="line">        if (o instanceof UserRegisterMsgSubject) &#123;</div><div class="line">            UserRegisterMsgSubject userRegisterMsgSubject = (UserRegisterMsgSubject) o;</div><div class="line">            System.out.println(&quot;我是管理员==&gt;&quot;+userRegisterMsgSubject.subjectName()+&quot;==&gt;&quot;+userRegisterMsgSubject.getIp() + &quot;==&quot; + userRegisterMsgSubject.getUserName() + &quot;===&quot; + userRegisterMsgSubject.getPw());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (o instanceof SystemMsgSubject) &#123;</div><div class="line">            SystemMsgSubject systemMsgSubject = (SystemMsgSubject) o;</div><div class="line">            System.out.println(&quot;我是管理员==&gt;&quot;+systemMsgSubject.getSystemName()+&quot;==&gt;&quot;+arg);</div><div class="line">         &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 员工类型</div><div class="line"> */</div><div class="line">class  EmployeeObserve implements Observe &#123;</div><div class="line"></div><div class="line">    private MsgSubject subject;</div><div class="line"></div><div class="line">    public EmployeeObserve(MsgSubject subject) &#123;</div><div class="line">        this.subject = subject;</div><div class="line">        subject.addObserver(this);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void update(MsgSubject o, Object arg) &#123;</div><div class="line"></div><div class="line">        if (o instanceof UserRegisterMsgSubject) &#123;</div><div class="line">            UserRegisterMsgSubject userRegisterMsgSubject = (UserRegisterMsgSubject) o;</div><div class="line">            System.out.println(&quot;我是普通员工==&gt;&quot;+userRegisterMsgSubject.subjectName()+&quot;==&gt;&quot;+userRegisterMsgSubject.getIp() + &quot;==&quot; + userRegisterMsgSubject.getUserName() + &quot;===&quot; + userRegisterMsgSubject.getPw());</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (o instanceof SystemMsgSubject) &#123;</div><div class="line">            SystemMsgSubject systemMsgSubject = (SystemMsgSubject) o;</div><div class="line">            System.out.println(&quot;我是普通员工==&gt;&quot;+systemMsgSubject.getSystemName()+&quot;==&gt;&quot;+arg);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 用户注册消息</div><div class="line"> */</div><div class="line">class UserRegisterMsgSubject extends MsgSubject &#123;</div><div class="line"></div><div class="line">    private String userName;</div><div class="line">    private String ip;</div><div class="line">    private String pw;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String subjectName() &#123;</div><div class="line">        return &quot;用户注册消息&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public UserRegisterMsgSubject() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    public void notifyChange() &#123;</div><div class="line">        setChanged();</div><div class="line">        notifyObserve();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    public void setUserRegisterMsgSubject(String userName, String ip, String pw) &#123;</div><div class="line">        this.userName = userName;</div><div class="line">        this.ip = ip;</div><div class="line">        this.pw = pw;</div><div class="line">        notifyChange();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    public String getUserName() &#123;</div><div class="line">        return userName;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getIp() &#123;</div><div class="line">        return ip;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getPw() &#123;</div><div class="line">        return pw;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line"> * 系统消息</div><div class="line"> */</div><div class="line">class SystemMsgSubject extends MsgSubject &#123;</div><div class="line"></div><div class="line"></div><div class="line">    private String systemName;</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public String subjectName() &#123;</div><div class="line">        return &quot;系统消息&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public SystemMsgSubject() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    public void notifyChange(String msg) &#123;</div><div class="line">        setChanged();</div><div class="line">        notifyObservers(msg);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    public void setSystemMsgSubject(String systemName,String msg) &#123;</div><div class="line">        this.systemName = systemName;</div><div class="line">        notifyChange(msg);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public String getSystemName() &#123;</div><div class="line">        return systemName;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">/**</div><div class="line"> * 消息主题</div><div class="line"> */</div><div class="line">abstract class MsgSubject &#123;</div><div class="line"></div><div class="line"></div><div class="line">    private boolean changed = false;</div><div class="line">    private Vector&lt;Observe&gt; obs;</div><div class="line"></div><div class="line">    //必须要实现消息名称</div><div class="line">    abstract String subjectName();</div><div class="line"></div><div class="line">    public MsgSubject() &#123;</div><div class="line">        obs = new Vector&lt;&gt;();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    protected void addObserver(Observe o) &#123;</div><div class="line"></div><div class="line">        if (o == null) &#123;</div><div class="line">            throw new NullPointerException();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        if (!obs.contains(o)) &#123;</div><div class="line">            obs.add(o);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 删除观察者</div><div class="line">     **/</div><div class="line">    protected void deleteObserve(Observe o) &#123;</div><div class="line">        obs.removeElement(o);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 通知观察者消息(不传入参数)</div><div class="line">     */</div><div class="line">    protected void notifyObserve() &#123;</div><div class="line">        notifyObservers(null);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * 通知观察者消息</div><div class="line">     */</div><div class="line">    protected void notifyObservers(Object arg) &#123;</div><div class="line"></div><div class="line">        Object[] arrLocal = null;</div><div class="line">        if (!changed)</div><div class="line">            return;</div><div class="line">        arrLocal = obs.toArray();</div><div class="line">        clearChanged();</div><div class="line">        for (int i = arrLocal.length - 1; i &gt;= 0; i--) &#123;</div><div class="line">            ((Observe) arrLocal[i]).update(this, arg);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    protected void setChanged() &#123;</div><div class="line">        changed = true;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    protected void clearChanged() &#123;</div><div class="line">        changed = false;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+    <hr />
+   
+    
+        <section id="comments">
+ 
+ 
+ 
+    <div class="ds-thread" data-thread-key="clean-blog-设计模式观察模式-不解释" data-title="设计模式观察模式-不解释" data-url=":year/:month/:day/:title/"></div>
+ 
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'zccccccc'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+ 
+  </section>
+ 
+
+
+
+
+
+
+
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/zccccccc/" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2017 张超<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'zccccccc';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+</body>
+
+</html>
